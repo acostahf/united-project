@@ -1,11 +1,11 @@
 const express = require("express");
-
-require("./config/database");
+// const path = require("path");
 
 const app = express();
+require("dotenv").config();
 
 // require("dotenv").config();
-// require("./config/database");
+require("./config/database");
 
 // app.use(logger("dev"));
 // app.use(express.json());
