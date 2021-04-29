@@ -4,6 +4,7 @@ import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "./App.css";
 import CreateGroup from "./pages/CreateGroup";
+import Cohorts from "./components/Cohorts";
 
 const useStyles = makeStyles({
   root: {
@@ -27,6 +28,7 @@ function App() {
       <Button color="primary">Cohort button</Button>
       <Button color="primary">Create your own Cohort</Button>
       <CreateGroup />
+      <Cohorts />
     </div>
   );
 }

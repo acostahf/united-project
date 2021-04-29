@@ -24,6 +24,9 @@ const CreateGroup = () => {
     return (
         <div className={classes.root}>
            <FormControl>
+               <TextField id="standard-basic" label="name"/>
+               <TextField id="standard-basic" label="description"/>
+               <TextField id="standard-basic" label="date"/>
            <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -34,9 +37,6 @@ const CreateGroup = () => {
           <MenuItem value={20}>Python</MenuItem>
           <MenuItem value={30}>HTML&CSS</MenuItem>
         </Select>
-               <TextField id="standard-basic" label="name"/>
-               <TextField id="standard-basic" label="description"/>
-               <TextField id="standard-basic" label="name"/>
                <Button>Sumbit</Button>
            </FormControl>
 

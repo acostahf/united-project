@@ -7,6 +7,9 @@ require("dotenv").config();
 // require("dotenv").config();
 require("./config/database");
 
+var cohortsRouter = require("./routes/cohorts");
+app.use("/api/cohorts", cohortsRouter);
+
 // app.use(logger("dev"));
 // app.use(express.json());
 
