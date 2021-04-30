@@ -2,13 +2,19 @@ import { Card, CardContent } from '@material-ui/core';
 import React from 'react';
 
 
-function Cohorts(props) {
+const Cohorts = (props) => {
     return (
         <div>
         <Card>
-            <CardContent>
-                Cohort number one 
-            </CardContent>
+           
+            {props.cohorts.map((cohort) => (
+                <CardContent key={cohort._id}>
+                    <p>Name: {cohort.name}</p>
+                    <p>Description: {cohort.description}</p>
+                    <p>date: {cohort.date}</p>
+                    <p>catagory: {cohort.catagory}</p>
+                </CardContent>
+            ))}
         </Card>
         </div>
     );

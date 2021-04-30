@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var cohortsCtrl = require("../controllers/api/cohorts");
+var cohortsCtrl = require("../../controllers/api/cohorts");
 
 /* GET /api/cohorts */
 router.get("/", cohortsCtrl.index);

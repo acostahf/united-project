@@ -1,26 +1,24 @@
 const express = require("express");
-// const path = require("path");
+const path = require("path");
+const logger = require("morgan");
 
 const app = express();
-require("dotenv").config();
 
-// require("dotenv").config();
+require("dotenv").config();
 require("./config/database");
 
-var cohortsRouter = require("./routes/cohorts");
+var cohortsRouter = require("./routes/api/cohorts");
+
+app.use(logger("dev"));
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "build")));
+
 app.use("/api/cohorts", cohortsRouter);
 
-// app.use(logger("dev"));
-// app.use(express.json());
-
-// app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
-// app.use(express.static(path.join(__dirname, "build")));
-
-// Put API routes here, before the "catch all" route
-
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "build", "index.html"));
-// });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 const port = process.env.PORT || 3001;
 
