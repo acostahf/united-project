@@ -1,7 +1,8 @@
 .App {
   text-align: center;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio&display=swap");
 .App-logo {
   height: 40vmin;
   pointer-events: none;
